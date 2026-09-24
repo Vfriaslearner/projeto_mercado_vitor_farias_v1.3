@@ -1,0 +1,663 @@
+/* Página de Login */
+body{
+margin: 0;
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #2e7d32;
+font-family: sans-serif;
+flex-direction: column;
+padding: 20px 0;
+box-sizing: border-box;
+
+}
+
+.login-box,.cadastro-box{
+background-color: #fff;
+padding: 30px;
+border-radius: 10px;
+width: 320px;
+display: flex;
+flex-direction: column;
+gap: 15px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+box-sizing: border-box;  
+text-align: center; 
+
+}
+
+.mercado{
+    color: #2e7d32;
+    text-align: center;
+    margin: 0;
+    font-weight:bold;
+    
+}
+
+.campo{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+label{
+    align-self: flex-start;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+   
+} 
+
+#usuario,     /* linha 55-65 Elementos da página 1.1 Cadastro para controle e manutenção. */
+#senha,
+#nome-cadastro,      
+#email-cadastro,
+#usuario-cadastro,
+#senha-cadastro,
+#confirmar-senha-cadastro,
+#telefone-cadastro
+{
+font-weight:bold    
+}
+input[type="text"],
+input[type="password"],input[type="email"]{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #2e7d32;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: center;  
+
+}
+
+
+
+button[type="submit"]{
+    width: 100%;
+    background-color: #2e7d32;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    max-width: 280px;
+    align-self: center;
+    box-sizing: border-box;
+    margin-top: 5px;    
+} 
+
+.cadastro-link{
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+    text-decoration: underline;
+    color: #2e7d32;
+    font-size: 14px;
+}
+
+.esqueceu-senha-link{
+
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+    text-decoration: underline;
+    color: #fa0505;
+    font-size: 14px;
+}
+
+.footer{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+}
+/*=====================================================Aqui é o limite da página 1.login.html========================== */
+
+/*=====================================================Aqui se inicia a página 1.1 Cadastro.html e elementos de algumas outras páginas========================== */
+
+
+
+.cadastro-cliente{ /*1.1 Cadastro.html */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #2e7d32;
+}
+
+body.pagina-dashboard{    /*3.Dashboard.html */
+   justify-content: flex-start;
+   align-items: stretch;
+   padding: 0;
+   background-color: #2e7d32;
+   min-height: 100vh;
+   margin: 0;
+   display: flex;
+   flex-direction: column;
+
+} 
+.topo-dashboard{          /*3.Dashboard.html */
+    width: 100%;
+    background-color: #fff;
+    color: #fff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.quitandaria-logo{      /*3.Dashboard.html e restante das páginas exceto login */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.quitandaria-logo:hover{
+    background-color: #f0f0f0;
+}
+.logo-icone{ /*Tentar descobrir como colocar a logo sem bagunçar o sistema */
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: #e8f5e9;
+    padding:8px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+
+.emojis{   /*3.Dashboard.html e restante das páginas exceto login */
+    font-size: 24px;
+    line-height: 1;
+}
+.logo-texto{ /*3.Dashboard.html e restante das páginas exceto login */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo-texto strong{ /*3.Dashboard.html e restante das páginas exceto login */
+    font-size: 18px;
+    color: #2e7d32;
+    font-weight: 800;
+    line-height: 1.2;
+   
+}
+
+.logo-texto span{  /*3.Dashboard.html e restante das páginas exceto login */
+    color: #666;
+    font-size: 11px;
+    margin-top: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+ 
+} 
+
+a.quitandaria-logo,a.quitandaria-logo:visited{ /*3.Dashboard.html e restante das páginas exceto login */
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.conteudo-principal {   /*2.index- Acho  que vou mudar essa estratégia de caixa ou para a tela inteira ,ou para grade de produtos. Pensando....
+     */
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/*============================================3.Dashboard============================================================ */
+/*Consertar  a terceira tela do dashboard e fazer ela funcionar com a fonte e número certo */
+
+.titulo-acima h2,p{
+
+ color:#fff;   
+}
+
+.cards-resumo{  
+display:flex;  
+gap: 20px;
+margin:  25px 0; 
+}
+
+.card {        
+background-color: #fff;
+padding: 20px;
+border-radius: 8px;
+flex: 1;
+box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+box-sizing: border-box;    
+} 
+
+.card h3{
+margin: 0;
+font-size: 20px;
+color: #666;
+font-weight: bold;
+}
+
+.card .numero {
+font-size: 24px;
+font-weight: bold;    
+color: #2e7d32;
+margin: 10px 0 0 0;
+}
+
+.card-alerta{
+background-color: #fff;
+padding: 20px;
+border-radius: 8px;
+flex: 1;
+box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+box-sizing: border-box;     
+}
+
+
+.numero {
+color: #d32f2f; 
+font-size: 24px;
+font-weight: bold;    
+margin: 10px 0 0 0;  
+}
+
+.secao-tabela{
+background-color: #fff;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 4px 6px  rgba(0,0,0,0.1);    
+}
+
+.secao-tabela h3 {
+margin-top: 0;
+color: #2e7d32;
+}
+
+/*=============================================Fim de  Dashboard=========================================================== */
+
+/*=============================================Produtos.html=========================================================== */
+
+.tabela-produtos {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+
+}
+
+.tabela-produtos th,.tabela-produtos td{
+padding: 12px;
+border-bottom: 1px solid #ddd;    
+}
+
+.tabela-produtos th{
+background-color: #f4f6f4;
+color: #333333;    
+
+}
+
+
+/*=============================================Todas as abas (menu)=========================================================== */
+.menu-navegacao{
+display:flex;
+gap:20px;
+align-items: center;
+
+
+}
+
+
+.link-menu {
+    color: #2e7d32;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+
+} 
+
+.link-menu:hover {
+    background-color: #e8f5e9;
+    color: #1b5e20;
+}
+
+.link-menu.ativo {
+    background-color: #2e7d32;
+    color: #ffffff;
+}
+
+.btn-sair-topo {
+    color: #d32f2f;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 6px 12px;
+    border: 1px solid #d32f2f;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-sair-topo:hover {
+    background-color: #d32f2f;
+    color: #ffffff;
+}
+
+/*=============================================Fim de Todas as Abas (menu)===================================================== */
+
+/*==============================================Inicio.html===================================================================== */
+.hero-section{
+
+    background-color:#1b5e20; 
+    color:#fff;
+    display:flex; 
+    align-items:center;
+    justify-content: space-between;
+    padding:40px;
+    border-radius:12px;
+    margin-top:20px;
+    gap:30px;           
+} 
+
+.hero-conteudo{
+flex:1;
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+gap:15px;
+}
+
+.hero-tag {
+
+background-color: rgba(255,255,255,0.2);
+padding: 5px 12px;
+border-radius:20 px;
+font-size: 12px;
+font-weight:bold;
+text-transform:uppercase;
+}
+
+.hero-conteudo h1 {
+font-size:32 px;
+margin: 0;
+
+}
+
+.hero-conteudo p {
+font-size:15px;
+margin:10px;
+}
+
+.btn-hero{
+background-color:#fbc02d;
+color:#333;
+padding:12px 50px;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+font-size:15px; 
+}
+
+
+.btn-hero:hover {
+background-color:#fdd835;
+transform:translateY(-2px);
+
+}
+.hero img{
+flex:1;
+display:flex;
+justify-content:center;    
+}
+
+.hero-imagem img {
+width:100%;
+max-width:400px;
+height:280px;
+object-fit:cover;
+border-radius:12px;
+box-shadow:0 8px 16px rgba(0,0,0,0.2);
+} 
+
+.secao-categorias{
+margin-top: 40px;   
+}
+
+.titulo-secao {
+text-align:center;
+margin-bottom: 25px;    
+}
+
+.titulo-secao h2{
+color:#fff;
+font-size: 24px;
+margin:0;    
+}
+
+.titulo-secao p {
+
+color:#e8f5e9;
+font-size: 14px;
+margin-top: 5px;
+
+}
+
+.grid-categorias{
+display:grid;
+grid-template-columns: repeat(4,1fr);
+gap: 30px;
+}
+
+.card-categoria{
+background-color: #fff;  
+padding: 10px;
+border-radius: 10px;
+text-decoration: none;
+text-align:center;
+gap:10px;
+box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+transition: transform 0.2 ease,box-shadow 0.2 ease;
+}
+
+.card-categoria:hover{
+
+transform: translateY(-5px);
+box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+
+}
+.icone-categoria{
+font-size: 36px;
+background-color: #e8f5e9;
+border-radius: 60%;
+align-items: center;
+justify-content: center;
+
+}
+
+.card-categoria h3{
+color:#2e7d32;
+font: size 16px;
+
+}
+
+.secao-vitrine{ /* Monitorar a partir dessa configuração se as imagens vão aparecer (todas) */
+margin-top: 40px;
+margin-bottom: 40px;
+}
+
+.grid-produtos{   /* Monitorar a partir dessa configuração se as imagens vão aparecer (todas) */
+ 
+display:grid;
+grid-template-columns: repeat(4,1fr);
+gap: 20px;    
+}
+
+.card-produto-vitrine{
+background-color: #fff;  
+border-radius: 10px;
+padding: 15px;
+box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+position: relative;
+display: flex; 
+flex-direction: column;
+justify-content: space-between;
+transition: transform 0.2s ease;
+}
+
+.card-produto-vitrine:hover{
+transform:translateY(-5px);    
+}
+
+.tag-desconto{
+position:absolute;
+top:10px;
+left:10px;
+background-color: #d32f2f;
+color:#fff;
+font-size: 14px;
+font-weight: bold;
+padding: 4px 8px;
+border-radius: 4px;
+z-index: 2;
+}
+
+.imagem-produto-vitrine{
+width: 100%;
+height:140px;
+border-radius: 8px;
+overflow:hidden;
+margin-bottom: 12px;
+}
+
+.imagem-produto-vitrine img{
+
+width:100%;
+height: 100%;
+object-fit: cover;
+display:block;
+}
+
+.card-produto-vitrine h3{
+margin: 0 0 5px 0;
+font-size: 16px;
+color:#2e7d32;
+
+}
+
+.preco-produto{
+font-size: 18px;
+font-weight: bold;
+color:#333;
+margin-bottom: 12px;
+}
+
+.preco-produto small{
+font-size: 12px;
+color:#666;
+font-weight: normal;
+
+}
+
+.card-produto-vitrine{
+
+transition: transform 0.2 ease,box-shadow 0.2 ease, border-color 0.2s ease;
+     
+}
+
+.card-produto-vitrine:hover{
+
+transform: translateY(-6px);
+box-shadow: 0 8px 16px rgba(46,125,50,0.15);
+border-color:#2e7d32;    
+}
+
+
+
+
+
+
+
+/*=============================================Fim de Index.html (menu)===================================================== */
+
+/*=============================================Contato.html (menu)===================================================== */
+
+
+.secao-contato h2,.A{
+
+color:#fff;    
+}
+
+.grid-contato{
+display:grid;
+grid-template-columns: 1fr,1fr;
+gap: 30px;
+margin-top:25px;
+
+}
+
+
+.card-info-contato,.form-contato {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.8);
+} 
+
+.campo{
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.campo label{
+
+ font-size: 14px;
+ font-weight: bold;
+ color: #2e7d32;
+ margin-bottom: 5px;   
+} 
+
+.campo input,.campo textarea{
+
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 6px;
+font-size: 14px;    
+}
+
+.btn-enviar{
+ background-color:#2e7d32 ;
+ color: #fff;
+ border:none;
+ padding:12px  20px;
+ font-weight: bold;
+ cursor: pointer;
+ width: 100%;   
+
+}
+
+.caixa-destaque-verde{
+
+background-color: #e8f5e9;
+border-left: 4 px solid #2e7d32; 
+padding: 15px;
+margin-top: 20px;
+border-radius: 4px;
+font-size: 14px;   
+}
+
+
