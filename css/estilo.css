@@ -1,4 +1,67 @@
 /*-------------------------------------------------------------------------------------------------------------- */
+/*---------------------------------------------Elementos a Definir --------------------------------------------- */
+.conteudo-principal-inicio {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 100%;
+    padding: 90px 0 0 0;
+}
+
+.conteudo-principal-produtos {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 100%;
+    padding: 80px 0 0 0;
+    min-height:90vh;
+    
+    
+}
+
+.footer-produtos {
+    
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    margin: 150px 0 0 0;
+    padding:0 0 0 5px 0;
+    
+    
+}
+
+.footer-login{
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    padding:0 0 0 5px 0;
+    
+}
+
+.secao-tabela-produtos-page {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    margin: 0 15px 0 15px;
+
+}
+
+.titulo-acima-da-tabela {
+    color: #fff;
+    margin: 0 0 40px 0;    
+    padding: 0 20px;
+
+}
+
+.titulo-acima-sobre{
+margin:90px 0 30px 0;
+padding: 0 0 0 20px;
+color: #fff;
+
+}
 /*---------------------------------------------Elementos "universais" ------------------------------------------ */
 /*fontes*/
 * {
@@ -7,24 +70,60 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
-/*-------------------------------------------------------------------------------------------------------------- */
 
+.conteudo-principal {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 100%;
+    min-height: 90vh;
+    margin: 0 auto;
+    
+    
+
+}
+
+.conteudo-principal-centralizado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 50px; 
+    min-height: auto;
+
+}
 
 
 body{
+    
 margin: 0;
 min-height: 100vh;
 display: flex;
-justify-content: center;
-align-items: center;
 background-color: #0b8a12;
 font-family: sans-serif;
 flex-direction: column;
-padding: 20px 0;
 box-sizing: border-box;
+padding: 0px 0 60px 0; 
 /*Preciso descobrir como baixar a caixa de login mais para baixo */
 
 }
+
+
+.footer {
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    padding-bottom: 10px;
+    
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------- */
+/*---------------------------------------Login e Cadastro------------------------------------------------------- */
 
 .login-box,.cadastro-box{
 background-color: #fbf9f9;
@@ -110,13 +209,71 @@ button[type="submit"]{
 }
 
 
-.footer{
-    margin-top: 250px;
+
+/*--------------------------------------Outra Página Abaixo-------------------------------------------------- */
+/*--------------------------------------Esqueceu a Senha ?--------------------------------------------------- */
+
+.esqueceu-senha-container{
+    background-color:#fff;
+    color:#2e7d32;
+    border-radius:16px;
+    box-shadow:6px;
+    width: 300px;
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+    margin: 50px auto;
+    height:400px;
+    gap: 10px;
+}
+
+.esqueceu-senha-form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    
+}
+
+label {
+    align-self: flex-start;
+    margin-bottom: 5px;
+    
+
+}
+
+input[type="email"] {
+    width: 100%;
+    margin-bottom: 15px;
+    box-sizing: border-box; 
+     
+}
+
+input[type="email"]::placeholder {
+    font-weight: bold;
+       
+}
+
+.voltar-login-link {
+    display: block;
     text-align: center;
-    font-size: 12px;
-    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    color: #2e7d32;
+    font-size: 14px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    appearance: none;
+    
 }
 /*--------------------------------------Outra Página Abaixo-------------------------------------------------- */
+/*--------------------------------------Cadastro de Clientes------------------------------------------------- */
+
+
 .cadastro-cliente{
     display: flex;
     flex-direction: column;
@@ -125,6 +282,9 @@ button[type="submit"]{
     box-sizing: border-box;
     color: #2e7d32;
 }
+
+/*-----------------------------------------Dashboard----------------------------------------------------------- */
+
 
 body.pagina-dashboard{
    justify-content: flex-start;
@@ -137,11 +297,19 @@ body.pagina-dashboard{
    flex-direction: column;
 
 } 
+
+
+
+
 .topo-dashboard{
+    position:fixed;
+    top:0;
+    margin:0;
+    padding:0;
     width: 100%;
     background-color: #fff;
     color: #fff;
-    padding: 15px 30px;
+    padding: 0px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -206,11 +374,12 @@ a.quitandaria-logo,a.quitandaria-logo:visited{
     gap: 10px;
 }
 
-.conteudo-principal {
-    max-width: 1000px;
-    margin: 30px auto;
-    padding: 0 20px;
+.conteudo-principal-dashboard {
+    margin: 90px auto -30px auto;
+    padding: 0 20px 100px 20px;
     box-sizing: border-box;
+    width: 100%;
+    flex: 1;
 }
 
 .titulo-acima h2{
@@ -389,6 +558,8 @@ align-items: center;
     color: #ffffff;
 }
 
+/*----------------------------------------------------------------------------------------------------------------- */
+
 
 /* elementos do contato */
 .card-home {
@@ -413,6 +584,8 @@ align-items: center;
 
 .info-home {
     flex: 1;
+    padding: 0 20px;
+
 }
 
 .info-home h2 {
@@ -429,7 +602,7 @@ align-items: center;
 .lista-compras {
     list-style: none;
     padding: 0;
-    margin: 15px 0;
+    margin: 15px 5px 0 5px;
 }
 
 .lista-compras li {
